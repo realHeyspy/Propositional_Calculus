@@ -33,7 +33,6 @@ public class Propositional_Calculus {
 
 
 	public static void StepProcess(ArrayList<String> DataInput, String needProve) {
-		ListPartsTarget.clear();
 		PPCObject resultTHOA = null, currentV = null, current = null;
 		String result = "";
 		NormalizationData.Normalization(DataInput);
@@ -46,6 +45,7 @@ public class Propositional_Calculus {
 		System.out.printf("%-22s%-22s%-22s%-22s\n", "", "", "",
 				"|" + THOA.get(0).groupData + "(" + THOA.get(0).NumberRule + ")");
 		while (THOA.size() != 0) {
+			ListPartsTarget.clear();
 			if (currentV != null && current != null) {
 				WayToGoal.add(currentV.NumberRule);
 				WayToGoal.add(current.NumberRule);
